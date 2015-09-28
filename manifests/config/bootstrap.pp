@@ -30,5 +30,6 @@ define puppetserver::config::bootstrap (
     incl    => $targetfile,
     changes => $changes,
     onlyif  => $onlyif,
+    notify  => Service['puppetserver'],
   }
 }

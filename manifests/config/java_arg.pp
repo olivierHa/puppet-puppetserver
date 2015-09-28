@@ -36,5 +36,6 @@ define puppetserver::config::java_arg (
     lens    => 'Shellvars_list.lns',
     incl    => $target,
     changes => $changes,
+    notify  => Service['puppetserver'],
   }
 }

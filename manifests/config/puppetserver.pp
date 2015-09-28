@@ -16,5 +16,6 @@ define puppetserver::config::puppetserver (
     ensure => $ensure,
     value  => $value,
     type   => $setting_type,
+    notify => Service['puppetserver'],
   }
 }
